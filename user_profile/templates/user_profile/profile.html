@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+     <form action="" method="post"> {%  csrf_token %}
+
+{#    {{ form.as_p }}#}
+
+        <p><input id="id_username" maxlength="25" name="username" type="hidden" value='{{ user }}' /></p>
+
+        <p><label for="id_year_level">Year level:</label> <select id="id_year_level" maxlength="50" name="year_level" type="text">
+               <option>Freshman</option>
+               <option>Sophomore</option>
+               <option>Junior</option>
+               <option>Senior</option>
+               </select></p>
+        <p>An example of latitude would be 34.0000.</p>
+        <p><label for="id_lat">Latitude:</label> <input id="id_lat" maxlength="20" name="lat" type="text" /></p>
+        <p>An example of longitude would be -85.0000. The negative is required for those in the United States.</p>
+        <p><label for="id_lon">Longitude:</label> <input id="id_lon" maxlength="20" name="lon" type="text" /></p>
+
+        <p><label for="id_school">School:</label> <input id="id_school" maxlength="75" name="school" type="text" /></p>
+
+         <p> The reason for the year level, latitude, longitude, and school is for a research project that I am doing. </p>
+
+    <input type="submit" value="Submit" />
+    </form><br>
+
+    <a href="{% url 'profile:map' %}" class="btn btn-large btn-primary span2">See the Map</a>
+    <br>
+    <br>
+
+{% endblock %}

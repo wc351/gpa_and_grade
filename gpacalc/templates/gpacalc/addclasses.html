@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+     <form action="/gpa/addclasses/" method="post"> {%  csrf_token %}
+
+        <p><input id="id_user" maxlength="25" name="user" type="hidden" value='{{ user }}' /></p>
+
+        <p><label for="id_class_name">Class name:</label> <input id="id_class_name" maxlength="100" name="class_name" type="text" /></p>
+
+        <p><label for="id_credit_hours">Credit hours:</label> <select id="id_credit_hours" name="credit_hours" type="text" >
+               <option>4</option>
+               <option>3</option>
+               <option>2</option>
+               <option>1</option>
+               </select></p></p>
+
+        <p><label for="id_grade">Grade:</label> <select id="id_grade" maxlength="3" name="grade" type="text">
+               <option>A</option>
+               <option>B</option>
+               <option>C</option>
+               <option>D</option>
+               <option>F</option>
+               </select></p>
+
+    <input type="submit" value="Submit" />
+    </form><br>
+
+    <div><a href="{% url "gpa:allclasses" %}">View All Classes </a></div><br>
+
+{% endblock %}

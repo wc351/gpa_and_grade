@@ -1,0 +1,70 @@
+body {
+    background: url('/static/images/gpaandgradebg.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#page {
+    background-color: transparent;
+    border-radius: 15px;
+    width: 75%;
+    height: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    font-size: 22px;
+}
+
+caption{
+    font-family: 'Chau Philomene One', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1.2em;
+    text-align: center;
+    height: 100%;
+}
+
+h1
+{
+    font-family: 'Chau Philomene One', sans-serif;
+    font-size: 22px;
+    color: gray;
+    text-transform: uppercase;
+}
+
+/* navbar */
+
+
+#navigation
+{
+    width: 100%;
+    background: #333;
+    margin-bottom: 15px;
+}
+
+#navigation ul
+{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#navigation ul li
+{
+    list-style-type: none;
+    display: inline;
+    font-size: 18px;
+}
+
+#navigation li a
+{
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    border-right: 1px solid #fff;
+}
+
+#navigation li a:hover { background: #334455; }

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+<table>
+    <tr>
+            <th style="padding-right: 100px">Class Name</th>
+            <th style="padding-right: 100px">Grade</th>
+    </tr>
+        <tr>
+            <td>{{ object.class_name }}</td>
+            <td>{{ grade }}</td>
+        </tr>
+</table>
+</ul>
+    <br>
+    <br>
+    <div><a href="/grade/viewgrades/">View More Grades </a></div><br>
+    <div><a href="/grade/gradecalc/">Add More Grades </a></div><br>
+
+{% endblock %}

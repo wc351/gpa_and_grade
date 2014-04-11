@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+     <form action="/grade/gradecalc/" method="post">{%  csrf_token %}
+
+        <p><input id="id_user" maxlength="50" name="user" type="hidden" value='{{ user }}' /></p>
+        <p><label for="id_class_name">Class Name:</label> <input id="id_class_name" maxlength="50" name="class_name" type="text" /></p>
+        <p><label for="id_subject">Subject:</label> <input id="id_subject" maxlength="100" name="subject" type="text" /></p>
+
+        <br>
+
+        <p><label for="id_homework_total">Homework Points Total:</label> <input id="id_homework_total" name="homework_total" type="text" /></p>
+        <p><label for="id_homework_possible">Homework Points Possible:</label> <input id="id_homework_possible" name="homework_possible" type="text" /></p>
+        <p><label for="id_homework_percent">Homework Percent:</label> <input id="id_homework_percent" name="homework_percent" type="text" /></p>
+
+        <br>
+
+        <p><label for="id_tests_total">Tests Points Total:</label> <input id="id_tests_total" name="tests_total" type="text" /></p>
+        <p><label for="id_tests_possible">Tests Points Possible:</label> <input id="id_tests_possible" name="tests_possible" type="text" /></p>
+        <p><label for="id_tests_percent">Tests Percent:</label> <input id="id_tests_percent" name="tests_percent" type="text"/></p>
+
+        <br>
+
+        <p><label for="id_final_total">Final/Project Points Total:</label> <input id="id_final_total" name="final_total" type="text" /></p>
+        <p><label for="id_final_possible">Final/Project Points Possible:</label> <input id="id_final_possible" name="final_possible" type="text" /></p>
+        <p><label for="id_final_percent">Final/Project Percent:</label> <input id="id_final_percent" name="final_percent" type="text"/></p>
+
+        <br>
+
+
+    <input type="submit" value="Submit" />
+    </form><br>
+
+
+    <a href="/grade/viewgrades/">View Grades</a><br>
+
+    {{ form.errors }}
+
+{% endblock %}
