@@ -1,5 +1,7 @@
 # Django settings for gpa_and_grade project.
 import os
+from generate_key import generate_key
+
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
@@ -84,7 +86,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '1&ao&9g&(9q)*toub=l!=((1gq(61d!ikf+45^#9up^hl&sru2'
+SECRET_KEY = '{}'.format(generate_key(40, 128))
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
