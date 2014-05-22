@@ -1,6 +1,4 @@
 body {
-    background: url('/static/images/gpaandgradebg.png') no-repeat fixed center center transparent;
-    background-color: lightgrey;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8,9 +6,23 @@ body {
     text-align: center;
 }
 
-@media (max-width:900px) {
+@media screen and (min-width: 321px) {
     body{
     background-image: none;
+    background-color: lightgrey;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    body{
+    background-image: none;
+    background-color: lightgrey;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    body{
+    background: url('/static/images/gpaandgradebg.png') no-repeat fixed center center transparent;
     background-color: lightgrey;
     }
 }
