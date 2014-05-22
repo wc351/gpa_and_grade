@@ -1,9 +1,18 @@
 body {
-    background: url('/static/images/gpaandgradebg.png') no-repeat center center fixed;
+    background: url('/static/images/gpaandgradebg.png') no-repeat fixed center center transparent;
+    background-color: lightgrey;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    text-align: center;
+}
+
+@media (max-width:900px) {
+    body{
+    background-image: none;
+    background-color: lightgrey;
+    }
 }
 
 #page {
@@ -35,8 +44,12 @@ h1
     text-transform: uppercase;
 }
 
-/* navbar */
-
+h4
+{
+    font-family: 'Chau Philomene One', sans-serif;
+    font-size: 40px;
+    color: red;
+}
 
 #navigation
 {
@@ -68,3 +81,9 @@ h1
 }
 
 #navigation li a:hover { background: #334455; }
+
+
+    /**
+    * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+    * http://cssreset.com
+    */
